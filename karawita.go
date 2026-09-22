@@ -35,23 +35,27 @@ func main(){
 		resul := sumar(num1,num2)
 		fmt.Println(resul)
 	}else if op == 2{
-		resul := sumar(num1,num2)
+		resul := restar(num1,num2)
 		fmt.Println(resul)
 	}else if op == 3{
-		resul := sumar(num1,num2)
+		resul := multi(num1,num2)
 		fmt.Println(resul)
 	}else if op == 4{
-		resul := sumar(num1,num2)
-		fmt.Println(resul)
+		resul,war := divi(num1,num2)
+
+
+		if war != ""{
+			fmt.Println("JAJAJAJA")
+		}else {
+			fmt.Println(resul)
+		}
+
+		
 	}
 	
 	
 	
 	
-
-	
-	
-
 
 	
 
@@ -80,9 +84,12 @@ func multi(a int, b int) int{
 
 }
 
-func divi(a int, b int) int{
+func divi(a int, b int) (int,string){
+	if b == 0{
+		return 0,"MALDITO MAMAWEBO :)"
+	}
 
 	re := a / b
-	return re
+	return re,""
 
 }
